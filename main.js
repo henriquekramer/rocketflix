@@ -1,23 +1,41 @@
-import { API_KEY } from './api.js'
-import { BASE_URL } from './api.js'
-import { IMG_URL } from './api.js'
-import { language } from './api.js'
+import { API_KEY, BASE_URL, IMG_URL, language } from "./api.js";
 
 const shuffleButton = document.getElementById('shuffleButton')
 shuffleButton.addEventListener('click', getMovie)
 
 function getMovie() {
-  let randomId = Math.floor(Math.random() * 1001);
-  const url = `${BASE_URL}/${randomId}?api_key=${API_KEY}&${language}`
+  let movieId = Math.floor(Math.random() * 1000 + 1)
+  const container = document.querySelector('.container')
+  const url = `${BASE_URL}/${movieId}?api_key=${API_KEY}&${language}`
   
   axios.get(url)
     .then (response => {
       const data = response.data
-      titleMovie.textContent = data.title
-      movieOverview.textContent = data.overview
-      poster.src = `${IMG_URL}/`+ data.poster_path
-     })
-    .catch (error => console.error(error))
+      const movieTitle = data.title
+      const movieOverview = data.overview
+      const poster = `${IMG_URL}`+ data.poster_path
+
+      container.innerHTML = `
+        <div class="movie-poster">
+          <img src="${poster}" alt="movie-poster" id="poster">
+        </div>
+        <div class="movie-infos">
+          <h3 id="titleMovie">${movieTitle}</h3>
+          <p id="movieOverview">${movieOverview}</p>
+        </div>
+      `
+    })
+    .catch (() =>{
+
+      container.innerHTML = `
+        <div class="movie-poster">
+          <img src="./assets/coding.png" alt="movie-poster" id="poster">
+        </div>
+        <div class="movie-infos coding">
+          <p class="noFilm">Ops, hoje não é dia de assistir filme. Bora codar! 🚀</p>
+        </div>
+      `
+    })
 }
 
 

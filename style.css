@@ -51,7 +51,7 @@ header .title {
 /* ============ SECTION MOVIES ============ */
 section.movies .container {
   width: 100%;
-  max-width: 800px;
+  max-width: 650px;
   display: flex;
 }
 
@@ -74,6 +74,18 @@ section.movies .container {
 #poster {
   width: 171px;
   height: 244px;
+}
+
+.movie-infos.coding {
+  display: flex;
+  align-items: center;
+}
+
+.noFilm {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 30px;
+
 }
 
 /* ============ SECTION FIND MOVIES ============ */
