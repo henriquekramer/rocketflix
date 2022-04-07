@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="./main.js"></script>
+  <title>Rocketflix - Encontrar Filme</title>
+</head>
+<body>
+  <header>
+    <img src="./assets/logo.svg" alt="logo" class="logo">
+    <h1 class="title">Não sabe o que assistir?</h1>
+  </header>
+  <section class="movies">
+    <div class="container">
+      <div class="movie-poster">
+        <img src="./assets/poster.svg" alt="movie-poster" id="poster">
+      </div>
+      <div class="movie-infos">
+        <h3 id="titleMovie">Os Caça-Fantasmas</h3>
+        <p id="movieOverview">Em Nova York Peter Venkman, Ray Stantz e Egon Spengler são três cientistas do departamento de psicologia da Columbia University, que se dedicam ao estudo de casos paranormais. Quando a subvenção termina eles são despedidos e Venkman sugere que abram um negócio próprio, a exterminadora de fantasmas Ghostbusters. Inicialmente eles só têm despesas e nenhum cliente, mas eis que surge Dana Barrett, uma violoncelista que teve uma experiência assustadora em seu apartamento.</p>
+      </div>
+    </div>
+  </section>
+  <section class="find-movies">
+    <button id="shuffleButton"><img src="./assets/shuffle.svg" alt="shuffle">Encontrar filme</button>
+    <p>Clique em "Encontrar filme" que traremos informações<br> de algum filme para você assistir hoje.</p>
+  </section>
+</body>
+</html>
