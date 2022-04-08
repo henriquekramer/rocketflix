@@ -44,14 +44,14 @@ header .title {
 }
 
 .logo {
-  width: 87px;
-  height: 63px;
+  width: 5.4375rem;
+  height: 3.9375rem;
 }
 
 /* ============ SECTION MOVIES ============ */
 section.movies .container {
   width: 100%;
-  max-width: 650px;
+  max-width: 40.625rem;
   display: flex;
 }
 
@@ -66,14 +66,14 @@ section.movies .container {
 }
 
 #movieOverview {
-  line-height: 24px;
+  line-height: 1.5rem;
   text-align: justify;
   font-weight: 300;
 }
 
 #poster {
-  width: 171px;
-  height: 244px;
+  width: 10.6875rem;
+  height: 15.25rem;
 }
 
 .movie-infos.coding {
@@ -84,7 +84,7 @@ section.movies .container {
 .noFilm {
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 1.875rem;
 
 }
 
@@ -101,8 +101,8 @@ section.find-movies {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 47px;
-  width: 180px;
+  height: 2.9375rem;
+  width: 11.25rem;
   margin-bottom: 1.625rem;
   color: #000000;
   background: var(--bg-button);
@@ -120,7 +120,7 @@ section.find-movies {
 .find-movies p {
   text-align: center;
   font-size: 0.875rem;
-  line-height: 18px;
+  line-height: 1.125rem;
   font-weight: 300;
 }
 
@@ -144,7 +144,7 @@ section.find-movies {
 
 @media (max-width:360px) {
   :root {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   body {
